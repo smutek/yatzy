@@ -53,6 +53,11 @@ class Die:
     def __radd__(self, other):
         return int(self) + other
 
+    # return a printable representation of the object
+    # (info: https://stackoverflow.com/questions/1984162/purpose-of-pythons-repr)
+    def __repr__(self):
+        return str(self.value)
+
 
 class D6(Die):
     def __init__(self, value=0):
